@@ -1,1 +1,103 @@
 /* You can add global styles to this file, and also import other style files */
+/*@import '~bootstrap/dist/css/bootstrap.min.css'; */
+
+.mainpage{
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+}
+
+.maincontent{
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+}
+.wrapper{
+  height: calc(100vh - 200px);
+  overflow-y: auto;
+  padding-left: 10%;
+  padding-right: 10%;
+  font-family: arial;
+}
+.menuwrapper{
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.mainmenu{
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    background-color: #444;
+    border-left: 2px solid #333;
+    border-right: 2px solid #333;
+}
+
+#miimagen{
+    border-radius: 100px;
+    border: 2px solid #8DD;
+}
+
+.centrado{
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.descripcion{
+    color: #8DD;
+}
+
+.cursiva{
+    font-style: italic;
+}
+
+.links{
+  margin-top: auto;
+  margin-bottom: 20px;
+}
+
+.title{
+  color: #688;
+}
+
+.menuitemelement{
+  color: #8DD;
+  background-color: #333;
+  transition: all 500ms;
+}
+.menuitemelement:hover{
+  color: #8DD;
+  text-decoration: none;
+  font-style: italic;
+  transition: all 1000ms;
+}
+.menuitemelementselected{
+  color: black;
+  background-color: #8DD;
+  transition: all 500ms;
+}
+
+.experienceimage{
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+.experiencetitle{
+  color: #699;
+}
+
+.date{
+  font-style: italic;
+}
+.menuitemelementselected:hover{
+  color: black;
+  text-decoration:  none;
+  font-style: italic;
+  transition: all 1000ms;
+}
