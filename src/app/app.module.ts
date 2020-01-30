@@ -8,6 +8,7 @@ import {HomeComponent} from './components/home/home.component';
 import {ErrorComponent} from './components/error/error.component';
 import {ExperienceComponent} from './components/experience/experience.component';
 import {ProjectsComponent} from './components/projects/projects.component';
+import {StudiesskillsComponent} from './components/studiesskills/studiesskills.component';
 
 import{ routing, appRoutingProviders} from './app.routing';
 
@@ -19,7 +20,8 @@ import{ routing, appRoutingProviders} from './app.routing';
     HomeComponent,
     ErrorComponent,
     ExperienceComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    StudiesskillsComponent
   ],
   imports: [
     BrowserModule,
