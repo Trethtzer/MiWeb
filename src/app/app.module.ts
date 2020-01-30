@@ -7,6 +7,7 @@ import {MainmenuComponent} from './components/mainmenu/mainmenu.component';
 import {HomeComponent} from './components/home/home.component';
 import {ErrorComponent} from './components/error/error.component';
 import {ExperienceComponent} from './components/experience/experience.component';
+import {ProjectsComponent} from './components/projects/projects.component';
 
 import{ routing, appRoutingProviders} from './app.routing';
 
@@ -17,7 +18,8 @@ import{ routing, appRoutingProviders} from './app.routing';
     MainmenuComponent,
     HomeComponent,
     ErrorComponent,
-    ExperienceComponent
+    ExperienceComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,
