@@ -101,3 +101,8 @@
   font-style: italic;
   transition: all 1000ms;
 }
+
+.date{
+  color: #666 !important;
+  font-style: italic;
+}
