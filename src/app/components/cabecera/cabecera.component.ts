@@ -5,5 +5,5 @@ import {Component} from '@angular/core';
   templateUrl: './cabecera.component.html'
 })
 export class CabeceraComponent{
-    title = "HOLA A TODOS";
+     //title = "HOLA A TODOS";
 }

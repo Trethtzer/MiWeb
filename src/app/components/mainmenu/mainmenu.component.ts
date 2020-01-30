@@ -5,5 +5,5 @@ import {Component} from '@angular/core';
   templateUrl: './mainmenu.component.html'
 })
 export class MainmenuComponent{
-    title = 'Hola a todos';
+  descripcion = 'Software developer';
 }

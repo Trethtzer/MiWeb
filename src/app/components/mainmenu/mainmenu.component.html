@@ -1,23 +1,24 @@
 <div class="col-lg-12">
 
   <br><br>
-  <img id="miimagen" class="centrado" src="assets/mifoto.jpg" width="200px"/>
+  <img id="miimagen" class="centrado" src="assets/mifoto.jpg" width="75%"/>
   <br><br>
   <h3><p class="centrado descripcion">
     Guillermo Siles Bonilla
   </p></h3>
   <h5><p class="centrado descripcion cursiva">
-    Software Developer at Olinet. Probando cositas
+    {{descripcion}}
   </p></h5>
 
   <br>
 
   <nav id="nav">
     <a rel="noopener" class="menuitem row menuitemelement" [routerLink]= "['/home']" [routerLinkActive]="['menuitemelementselected']"><h5 class="centrado">Home</h5></a>
-    <a rel="noopener" class="menuitem row menuitemelement" href="assets/Resume_Guillermo_Siles_Bonilla.pdf" target="_blank"><h5 class="centrado">Curriculum Vitae </h5></a>
+    <a rel="noopener" class="menuitem row menuitemelement" href="assets/Resume_Guillermo_Siles_Bonilla.pdf" target="_blank"><h5 class="centrado">Curriculum Vitae</h5></a>
     <a rel="noopener" class="menuitem row menuitemelement" [routerLink]= "['/experience']" [routerLinkActive]="['menuitemelementselected']"><h5 class="centrado">Experience</h5></a>
     <a rel="noopener" class="menuitem row menuitemelement" [routerLink]= "['/projects']" [routerLinkActive]="['menuitemelementselected']"><h5 class="centrado">Projects</h5></a>
-    <a rel="noopener" class="menuitem row menuitemelement" [routerLink]= "['/study']" [routerLinkActive]="['menuitemelementselected']"><h5 class="centrado">Studies and certifications </h5></a>
+    <a rel="noopener" class="menuitem row menuitemelement" [routerLink]= "['/study']" [routerLinkActive]="['menuitemelementselected']"><h5 class="centrado">Studies and skills</h5></a>
+    <a rel="noopener" class="menuitem row menuitemelement" [routerLink]= "['/certifications']" [routerLinkActive]="['menuitemelementselected']"><h5 class="centrado">Certifications</h5></a>
     <a rel="noopener" class="menuitem row menuitemelement" [routerLink]= "['/hobbies']" [routerLinkActive]="['menuitemelementselected']"><h5 class="centrado">Hobbies</h5></a>
   </nav>
 
@@ -28,15 +29,21 @@
 
     <div class="col-lg-1"></div>
     <div class="col-lg-3">
-      <img id="miimagen" class="centrado" src="assets/mifoto.jpg" width="40px"/>
+      <a rel="noopener" href="https://github.com/Trethtzer" target="_blank">
+        <img id="miimagen" class="centrado" src="assets/github.jpg" width="100%"/>
+      </a>
     </div>
 
     <div class="col-lg-3">
-      <img id="miimagen" class="centrado" src="assets/mifoto.jpg" width="40px"/>
+      <a rel="noopener" href="https://www.linkedin.com/in/guillermosilesbonilla/" target="_blank">
+        <img id="miimagen" class="centrado" src="assets/linkedin.jpg" width="40px"/>
+      </a>
     </div>
 
     <div class="col-lg-3">
-      <img id="miimagen" class="centrado" src="assets/mifoto.jpg" width="40px"/>
+      <a rel="noopener" href="https://www.instagram.com/trethtzer/" target="_blank">
+        <img id="miimagen" class="centrado" src="assets/instagram.jpg" width="40px"/>
+      </a>
     </div>
     <div class="col-lg-1"></div>
 
