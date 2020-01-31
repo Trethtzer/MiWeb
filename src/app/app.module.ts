@@ -10,6 +10,7 @@ import {ExperienceComponent} from './components/experience/experience.component'
 import {ProjectsComponent} from './components/projects/projects.component';
 import {StudiesskillsComponent} from './components/studiesskills/studiesskills.component';
 import {CertificationsComponent} from './components/certifications/certifications.component';
+import {HobbiesComponent} from './components/hobbies/hobbies.component';
 
 import{ routing, appRoutingProviders} from './app.routing';
 
@@ -23,7 +24,8 @@ import{ routing, appRoutingProviders} from './app.routing';
     ExperienceComponent,
     ProjectsComponent,
     StudiesskillsComponent,
-    CertificationsComponent
+    CertificationsComponent,
+    HobbiesComponent
   ],
   imports: [
     BrowserModule,
