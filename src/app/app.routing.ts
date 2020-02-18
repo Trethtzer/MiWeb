@@ -8,6 +8,7 @@ import {ProjectsComponent} from './components/projects/projects.component';
 import {StudiesskillsComponent} from './components/studiesskills/studiesskills.component';
 import {CertificationsComponent} from './components/certifications/certifications.component';
 import {HobbiesComponent} from './components/hobbies/hobbies.component';
+import {ProjectGoComponent} from './components/projectGo/projectGo.component';
 
 
 const appRoutes: Routes = [
@@ -18,6 +19,7 @@ const appRoutes: Routes = [
     {path: 'studiesskills', component: StudiesskillsComponent},
     {path: 'certifications', component: CertificationsComponent},
     {path: 'hobbies', component: HobbiesComponent},
+    {path: 'projectGo',component: ProjectGoComponent},
     {path: '**', component: ErrorComponent} // ESTA SIEMRPE DEBE SER LA ULTIMA DE TODAS.
 ];
 

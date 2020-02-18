@@ -11,6 +11,7 @@ import {ProjectsComponent} from './components/projects/projects.component';
 import {StudiesskillsComponent} from './components/studiesskills/studiesskills.component';
 import {CertificationsComponent} from './components/certifications/certifications.component';
 import {HobbiesComponent} from './components/hobbies/hobbies.component';
+import {ProjectGoComponent} from './components/projectGo/projectGo.component';
 
 import{ routing, appRoutingProviders} from './app.routing';
 
@@ -25,7 +26,8 @@ import{ routing, appRoutingProviders} from './app.routing';
     ProjectsComponent,
     StudiesskillsComponent,
     CertificationsComponent,
-    HobbiesComponent
+    HobbiesComponent,
+    ProjectGoComponent
   ],
   imports: [
     BrowserModule,

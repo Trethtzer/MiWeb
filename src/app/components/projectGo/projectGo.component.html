@@ -1,0 +1,177 @@
+
+<div id="main">
+
+  <!-- Meter imagen titular aqui -->
+  <br><br>
+	<h2 class="centrado experiencetitle">Automatic recording of a Go game</h2>
+  <br><br>
+	<p>This is my final project of my computer science degree. The objective of this work was to build an
+    Android app that can analize a game of go with a mobile phone and generate an archive with the moves
+    the players played during the game. Therefore the game can be reviewed later on in other section of the app,
+    which should be able to reproduce the game without errors.</p>
+	<p>The detection of moves has been achieved by computer vision techniques using the OpenCV library,
+    with the minimum interaction between players and app. It will be necessary though to prepare
+    the system before the game starts (with an user friendly interface), setting the mobile at a proper height and
+    manually calculating all the corners in order to detect the board.</p>
+
+  <br><br>
+	<section id="overview">
+		<div class="container">
+			<header class="experiencetitle">
+				<h3>Overview</h3>
+			</header>
+			<br>
+      <div class="row">
+  			<span class="col-lg-4">
+          <img class="experienceimage" src="assets/images/project_go_1.jpg" alt="" />
+          <figcaption>Figure 1: Go match at middle game.</figcaption>
+        </span>
+        <span class="col-lg-8">
+          Go games can be quite large, and the traditional way of anotate every move made during the game in a papersheet
+          or in another mobile app may be painful (at least for me). That is why I decided to automatize this task,
+          by designing an Android App that solve this using computer vision techniques.
+    			Therefore, the objective of this project is to build an app that is capable of recording a Go
+          game and save it into a database, for further uses. Indeed, it is composed of two main sections,
+          the recording section and the watch section. The recording section is used to record a Go game and
+          save it into the database. Later on, in the watch section you will see a list of all the games
+          saved into the database. You can select one and reproduce it in another screen.
+        </span>
+      </div>
+      <br><br>
+      <div class="row">
+        <span class="col-lg-8">
+          The procedure would be the following:
+    			<br><br>
+    			1. Set the tripod and the camera pointing at the board, at a remarkable height.
+    			<br><br>
+    			2. Select Record Game.
+    			<br><br>
+    			3. Detect the corners. This is done by placing stones in the corners, the camera will detect the circles and calculate the center in every frame, finally making a mean of all the data available. It can be manually fixed to get more accuracy.
+    			<br><br>
+    			4. Select start to start recording. Now nothing else is needed, you can play the game.
+    			<br><br>
+    			5. When you want you can save the game into the database by touching the save icon in the menu bar.
+    			<br><br>
+    			6. Now the game will be listed in the watch section and can be reviewed.
+        </span>
+        <span class="col-lg-4">
+          <img class="experienceimage" src="assets/images/project_go_2.jpg" alt="" />
+          <figcaption>Figure 2: System currently working in my living room.</figcaption>
+        </span>
+      </div>
+		</div>
+	</section>
+
+  <br>
+
+	<section id="testandresults">
+		<div class="container">
+      <header class="experiencetitle">
+				<h3>Test and Results</h3>
+			</header>
+			<br>
+      <div class="row">
+
+        <span class="col-lg-4">
+          <img class="experienceimage" src="assets/images/project_go_3.jpg" alt="" />
+          <figcaption>Figure 3: Frame captured by the camera before the image processing.</figcaption>
+        </span>
+        <span class="col-lg-8">
+          First of all, the images should be submitted to a process in which the board will be transformed into a
+          perfect square. The image before processing can be viewed in the figure 3, and in figure 4 after processing.
+          As we said before, we need to know the coordinates of the corners (painted in pink in the figure 3)
+          and this is done manually, before the app starts to process images. To do so, the player will use the graphic
+          interface to choose a corner, then place a stone in it and push the "Find corner" button. The app will search for a
+          circle shape and calculate the center, which will be the corner. Since the result may not be very accurate, it is
+          possible to manually adjust the calculated point moving it with arrows in the interface.
+          <br>
+          With this four corners we can calculate a perfect square by making use of homography,
+          as any two images of the same planar surface in space are related by a homography.
+        </span>
+
+        <span class="col-lg-12">
+  			<br>
+        <br>
+        </span>
+
+        <span class="col-lg-8">
+          After we apply homography we know the board is a perfect square (as you can see in figure 4), so we can easily
+          calculate the rest of the intersections of the board, colored in green In figure 4.
+          The way to detect the stones will be to search for
+          circles in the images, calculate the center (which is a point) and then calculate which of all the intersections
+          is the nearest to the circle's center.
+          Thats how we guess in which intersection the move was played.
+    			<br>
+          <br>
+    		The algorithm that recognizes the circles in an image uses Hough transforms.
+          At the end of this page there is a link to my pdf project, where you can check all the details about how Hough works.
+        </span>
+        <span class="col-lg-4">
+          <img class="experienceimage" src="assets/images/project_go_4.jpg" alt="" />
+          <figcaption>Figure 4: Frame captured by the camera after the image processing.</figcaption>
+        </span>
+
+        <span class="col-lg-12">
+  			<br>
+        <br>
+        </span>
+
+        <span class="col-lg-4">
+          <img class="experienceimage" src="assets/images/project_go_5.jpg" alt="" />
+          <figcaption>Figure 5: First results.</figcaption>
+        </span>
+        <span class="col-lg-8">
+          The first results were very promising, because even though we had some issues with excepcional situations,
+          the app detected almost all the stones. There were room for improvements though. There was a problem with my
+          algorithm that make the app crashes after a random time. Also there were two important problems that should be
+          overcome: false positives and false negatives.
+          <br>
+    			False negative consist in not detecting a stone in an occupied intersection, like you can see in figure 5 at
+          the top of the board. Thats usually because the stone has another stones of the same color near it,
+          breaking partially the circle's shape, or because of the illumination
+          (in this case the shadow plus the stone at his left side). This problem was usually related to black stones, as you
+          can imagine.
+        </span>
+
+        <span class="col-lg-12">
+  			<br>
+        <br>
+        </span>
+
+        <span class="col-lg-8">
+          The false positive consists in detecting a stone in an empty intersection, like you can see in figure 6.
+          This is mostly caused by the efects of light, and because of the way my algorithm works, more time between
+          moves implies more possibilities of a false positive.
+    			<br>
+    			To solve this I used a lot of computer vision techniques like correlation, filters, Hough...
+          combined in meticulous proportions to give the final result. It required time to make experiments and change
+          parameters until finding the perfect values for them, but it was worth it. You can check and read the theory
+          and experiments I did, like I said before, in my pdf at the bottom of this article.
+        </span>
+        <span class="col-lg-4">
+          <img class="experienceimage" src="assets/images/project_go_6.jpg" alt="" />
+          <figcaption>Figure 6: First results, part 2.</figcaption>
+        </span>
+
+        <span class="col-lg-12">
+  			<br>
+        <br>
+        </span>
+
+        <span class="col-lg-7">
+          <img class="experienceimage" src="assets/images/project_go_7.jpg" alt="" />
+          <figcaption>Figure 7: One of the final tests. </figcaption>
+        </span>
+        <span class="col-lg-5">
+          In figure 7 you can see The 14th Women's Kuksu, a game from the Lee Hajin's book. One of the last succesfull experiments.
+          <br>
+          <br>
+          Here you can download my project presentation in pdf format, in case you are curious of the methods I used.
+          <br><br><br>
+          <a rel="noopener" href="assets/tfg_guillermosilesbonilla.pdf" target="_blank"><h5 class="centrado">Automatic recording of a Go game.</h5></a>
+        </span>
+
+      </div>
+		</div>
+	</section>
+</div>

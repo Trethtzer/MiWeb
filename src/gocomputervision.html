@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Guille's lair</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Header -->
+			<section id="header">
+				<header>
+					<a href="https://silesbonilla.com"><span class="image avatar"><img src="../images/avatar.jpg" alt="" /></span></a>
+					<h1 id="logo">Guillermo Siles Bonilla</h1>
+					<p> Software developer at Olinet</p>
+				</header>
+				<nav id="nav">
+					<ul>
+						<!--TODO Cambiar los id one, two , three.... por nombres descriptivos -->
+						<li><a href="#resume_gocomputervision" class="active">Resume</a></li>
+						<li><a href="#overview">Overview</a></li>
+						<li><a href="#testandresults">Test and Results</a></li>
+						<li><a href="./tfg_guillermosilesbonilla.pdf">PDF</a></li>
+					</ul>
+				</nav>
+				<footer>
+					<ul class="icons">
+						<li><a href="https://www.instagram.com/trethtzer" class="icon fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
+						<li><a href="https://github.com/Trethtzer" class="icon fa-github" target="_blank"><span class="label">Github</span></a></li>
+						<li><a href="https://www.linkedin.com/in/guillermosilesbonilla" class="icon fa-linkedin" target="_blank"><span class="label">Linkedin</span></a></li>
+						<!-- TODO Click on email, show a box, write subject and text and send to my email -->
+						<!-- <li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li> -->
+					</ul>
+				</footer>
+			</section>
+
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+
+						<section id="resume_gocomputervision">
+								<div class="container">
+									<header class="major">
+										<h2>Automatic recording of a Go game</h2>
+									</header>
+									<p>This is my final project of my computer science degree. The objective of this work was to build an Android app that can analize a game of go with a mobile phone and generate an archive with the moves the players played during the game. Thanks to this the game can be reviewed later on in other section of the app, that should be able to reproduce the game without errors.</p>
+									<p>The detection of moves has been achieved by computer vision using the OpenCV library, with the minimum interaction between the player and the app. It will be necessary to prepare the system before the game starts, setting the mobile at a proper height and manually calculating all the c orners in order to detect the board.</p>
+								</div>
+						</section>
+
+						<section id="overview">
+							<div class="container">
+								<header class="major">
+									<h2>Overview</h2>
+								</header>
+								<p><figure>
+										<span class="image left"><img src="../images/project_go_1.jpg" alt="" /><figcaption>Figure 1: Go match at middle game.</figcaption></span> Go games can be quite large, so anotate every move made during the game in a papersheet may be painful (at least for me). That is why I decided to automatize this task, by designing an Android App that solve this using computer vision techniques.
+										Therefore, the objective of this project is to build an Android app that is capable of recording a Go game and save it into a database, for further uses. Indeed, it is composed of two main sections, the recording section and the watch section. The recording section is used to record a Go game and save it into the database. Later on, in the watch section you will see a list of all the games saved into the database. You can select one and watch it in another screen.
+								</figure></p>
+								<p><figure>
+										<span class="image right"><img src="../images/project_go_2.png" alt="" /><figcaption>Figure 2: System currently working in my living room.</figcaption></span> The procedure would be the following:
+										<br>
+										1. Set the tripod and the camera pointing at the board, at a remarkable height.
+										<br>
+										2. Select Record Game.
+										<br>
+										3. Detect the corners. This is done by placing stones in the corners, the camera will detect the circles and calculate the center in every frame, finally making a mean of all the data available. It can be manually fixed to get more accuracy.
+										<br>
+										4. Select start to start recording. Now nothing else is needed, you can play the game.
+										<br>
+										5. When you want you can save the game into the database by touching the save icon in the menu bar.
+										<br>
+										6. Now the game will be listed in the watch section and can be reviewed.
+								</figure></p>
+							</div>
+						</section>
+
+						<section id="testandresults">
+							<div class="container">
+								<header class="major">
+									<h2>Test and Results</h2>
+								</header>
+
+								<p><figure>
+										<span class="image left"><img src="../images/project_go_3.png" alt="" /><figcaption>Figure 3: Frame captured by the camera before the image processing.</figcaption></span> First of all, the images should be submitted to a process in which the board will be transformed into a perfect square. The image before processing can be viewed in the figure 3, and in figure 4 after processing. As we said before, we need to know the coordinates of the corners (painted in pink in the figure 3) and this is done manually, before the app starts to process images. With this four corners and four corners of a perfect square we can now make use of homography, as any two images of the same planar surface in space are related by a homography.
+								</figure></p>
+								<p><figure>
+										<span class="image right"><img src="../images/project_go_4.png" alt="" /><figcaption>Figure 4: Frame captured by the camera after the image processing.</figcaption></span> After we apply homography we know the board is a perfect square and we have the coordinates of the four corners (we invented it when calculating the homography) so we can easily calculate the rest of the intersections of the board. In figure 4 they are all colored with green. We can now search for circles in the images and calculate what is the nearest intersection to the circle's center. Thats how we can now in which intersection the move was played.
+										<br>
+										After that is executed an algorithm that recognizes the circles in an image, using Hough transforms. At the end of this page there is a link to my pdf project, where you can check all the details about how Hough works.
+								</figure></p>
+								<p><figure>
+										<span class="image left"><img src="../images/project_go_5.png" alt="" /><figcaption>Figure 5: First results.</figcaption></span> The first results were very promising, because even though we had some issues with excepcional situations, the app detected almost all the stones. There were room for improvements though. There was a problem with my algorithms that make the app crashes after a random time. Also we had to kind of major problems: false positives and false negatives.
+										False negative consist in not detecting a stone in an occupied intersection, like you can see in figure 5 at the top of the board. Thats usually because the stone has another stones of the same color near it, breaking partially the circle's shape, or because of the illumination.
+								</figure></p>
+								<p><figure>
+										<span class="image right"><img src="../images/project_go_6.png" alt="" /><figcaption>Figure 6: First results, part 2.</figcaption></span> The false positive consists in detecting a stone in an empty intersection, like you can see in figure 6. This is mostly caused by the efects of light, and because of the way my algorithm works, more time between moves implies more possibilities of a false positive.
+										<br>
+										To solve this I used a lot of computer vision techniques like correlation, filters, Hough... combined in meticulous proportions to give the final result. It required time to make experiments and change parameters until finding the perfect values for them, but it was worth it. You can check and read the theory and experiments I did, like I said before, in my pdf at the bottom of this article.
+								</figure></p>
+								<figure>
+									<span class="image"><img src="../images/project_go_7.png" alt="" /><figcaption>The 14th Women's Kuksu, game from the Lee Hajin's book. One of the last succesfull experiments.</figcaption></span>
+								</figure>
+							</div>
+						</section>
+					</div>
+			</div>
+
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrollzer.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../assets/js/skel.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>
