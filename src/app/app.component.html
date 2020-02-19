@@ -1,5 +1,5 @@
 
-<div (window:resize)="onResize($event)" class="row mainpage h-100" *ngIf="!isMobile">
+<div (window:resize)="onResize()" class="row mainpage h-100" *ngIf="!isMobile">
   <div class="col-lg-9 maincontent">
       <cabecera></cabecera>
 
@@ -13,7 +13,7 @@
   </div>
 </div>
 
-<div (window:resize)="onResize($event)" class="row mainpage h-100" *ngIf="isMobile">
+<div (window:resize)="onResize()" class="row mainpage h-100" *ngIf="isMobile">
   <div class="col-xs-12 maincontent">
     <div id="menu" class="mainmenu">
       <mainmenumovil></mainmenumovil>
