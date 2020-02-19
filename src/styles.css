@@ -21,6 +21,13 @@
   padding-right: 10%;
   font-family: arial;
 }
+
+.maincontentmobile{
+  padding-left: 10%;
+  padding-right: 10%;
+  font-family: arial;
+}
+
 .menuwrapper{
   height: 100vh;
   overflow-y: scroll;
