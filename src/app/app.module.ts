@@ -12,6 +12,7 @@ import {StudiesskillsComponent} from './components/studiesskills/studiesskills.c
 import {CertificationsComponent} from './components/certifications/certifications.component';
 import {HobbiesComponent} from './components/hobbies/hobbies.component';
 import {ProjectGoComponent} from './components/projectGo/projectGo.component';
+import {ResponsiveService} from './utils/responsive.service';
 
 import{ routing, appRoutingProviders} from './app.routing';
 
@@ -33,7 +34,7 @@ import{ routing, appRoutingProviders} from './app.routing';
     BrowserModule,
     routing
   ],
-  providers: [appRoutingProviders],
+  providers: [appRoutingProviders, ResponsiveService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

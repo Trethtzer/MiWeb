@@ -1,5 +1,5 @@
 
-<div class="row mainpage h-100">
+<div (window:resize)="onResize($event)" class="row mainpage h-100" *ngIf="!isMobile">
   <div class="col-lg-9 maincontent">
       <cabecera></cabecera>
 
@@ -10,6 +10,17 @@
   </div>
   <div id="menu" class="col-lg-3 mainmenu menuwrapper">
     <mainmenu></mainmenu>
+  </div>
+</div>
+
+<div (window:resize)="onResize($event)" class="row mainpage h-100" *ngIf="isMobile">
+  <div class="col-lg-9 maincontent">
+      <!-- mainmenumovil -->
+
+      <section id="main" class="wrapper">
+          <router-outlet></router-outlet>
+      </section>
+
   </div>
 
 </div>
