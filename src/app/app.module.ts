@@ -13,6 +13,7 @@ import {StudiesskillsComponent} from './components/studiesskills/studiesskills.c
 import {CertificationsComponent} from './components/certifications/certifications.component';
 import {HobbiesComponent} from './components/hobbies/hobbies.component';
 import {ProjectGoComponent} from './components/projectGo/projectGo.component';
+import {ProjectIndexComponent} from './components/projectIndex/projectIndex.component';
 import {ResponsiveService} from './utils/responsive.service';
 
 import{ routing, appRoutingProviders} from './app.routing';
@@ -30,7 +31,8 @@ import{ routing, appRoutingProviders} from './app.routing';
     StudiesskillsComponent,
     CertificationsComponent,
     HobbiesComponent,
-    ProjectGoComponent
+    ProjectGoComponent,
+    ProjectIndexComponent
   ],
   imports: [
     BrowserModule,

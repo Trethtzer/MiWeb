@@ -1,0 +1,159 @@
+
+<div id="main">
+
+  <!-- Meter imagen titular aqui -->
+  <br><br>
+	<h2 class="centrado experiencetitle">Index Project</h2>
+  <br><br>
+	Have I said I like to learn new languages? In fact, I decided when I was 25 that every five years I would start learning
+  a new one. Now I am learning Korean and In a couple of years I think maybe Russian or German will be next.
+	<br>
+  I had a problem though. I don't have much time to study languages, and it is specially difficult for me to remember and practice
+  the vocabulary I just learnt. There are some websites and apps that helps you with that, but I couldn't find anything that
+  perfectly suits my needs and I was also learning how to develop Android apps, so 1+1.
+
+  <br><br>
+	<section id="overview">
+
+		<div class="container">
+			<header class="experiencetitle">
+				<h3>Overview</h3>
+			</header>
+			<br>
+
+      <div class="row">
+  			<span class="col-lg-4">
+          <img class="experienceimage" src="assets/images/project_index_1.png" alt="" />
+          <figcaption>Figure 1: Main screen.</figcaption>
+        </span>
+        <span class="col-lg-8">
+          The main idea is: you create some languages, add some words and study or do tests. In figure 1 you can see I have two
+          languages created, one in gold (favourite always displayed at top).
+          <br><br>
+          It doesn't have to be languages though, can be books you are studying or whatever could better fit your interests.
+          When I started developing this app, I wanted it to be like some kind of electronic notebook that allows you to
+          store the words but also study them, efficiently search them and make tests. Therefore this is dummy data, I will not
+          have languages here but notebooks, maybe one per book.
+        </span>
+      </div>
+
+      <br><br>
+    </div>
+  </section>
+
+  <section id="overview">
+
+		<div class="container">
+			<header class="experiencetitle">
+				<h3>Data storage</h3>
+			</header>
+			<br>
+
+      <div class="row">
+        <span class="col-lg-4">
+          <img class="experienceimage" src="assets/images/project_index_2.png" alt="" />
+          <figcaption>Figure 2: Screen to see words already stored.</figcaption>
+        </span>
+        <span class="col-lg-4">
+          <img class="experienceimage" src="assets/images/project_index_3.png" alt="" />
+          <figcaption>Figure 3: Screen to add a word.</figcaption>
+        </span>
+        <span class="col-lg-4">
+          <img class="experienceimage" src="assets/images/project_index_4.png" alt="" />
+          <figcaption>Figure 4: Screen to add Categories.</figcaption>
+        </span>
+      </div>
+
+      <br><br>
+      <div class="row">
+        <span class="col-lg-12">
+          Figure 2 shows us how the words are displayed once saved in the database. We can of course filter the data to
+          search for any specific word. Here you can also mark them to study or not and see the results in your tests,
+          so you know which words you have to pay atention to. Although there is not screen of this, you can touch a word to
+          enter the 'word detail section' in which all info is displayed and can be altered.
+          <br><br>
+          The screen to add new words can be seen in Figure 3. The difficulty and categories are useful for filters and tests.
+          You can add zero, one or more categories to the word and choose between easy, medium or difficult.
+          <br><br>
+          The last screen in Figure 4 is related to create new Categories. The reason for categories to exist is obvious.
+          I would like to classify the words to choose what do I want to study, or to make searchs easier when trying to find
+          a word. Categories can be language/notebook specific or global, it depends on what the user choose in options.
+        </span>
+      </div>
+
+		</div>
+	</section>
+
+  <br>
+
+	<section id="testandresults">
+		<div class="container">
+      <header class="experiencetitle">
+				<h3>Study section</h3>
+			</header>
+			<br>
+
+      <div class="row">
+        <span class="col-lg-4">
+          <img class="experienceimage" src="assets/images/project_index_5.png" alt="" />
+          <figcaption>Figure 5: Screen to check and study words.</figcaption>
+        </span>
+        <span class="col-lg-4">
+          <img class="experienceimage" src="assets/images/project_index_6.png" alt="" />
+          <figcaption>Figure 6: Screen to prepare the test.</figcaption>
+        </span>
+        <span class="col-lg-4">
+          <img class="experienceimage" src="assets/images/project_index_7.png" alt="" />
+          <figcaption>Figure 7: Screen that shows test results.</figcaption>
+        </span>
+      </div>
+
+      <br><br>
+      <div class="row">
+        <span class="col-lg-12">
+          When enter into the study section, a screen like the one in Figure 5 appears. I created this view because I wanted
+          to be able to see only one of the two columns when studying. If i want to check a word, just clicking in the buttons
+          above will show/hide the specified column. No more hands covering the answers.
+          <br><br>
+          If we go to the Create test screen (figure 6), there are two options. First one is simple, just do a simple test by
+          clicking 'quickstart' (the parameters for quickstart can be configured in the options of course). Second one is
+          choosing what do we want to study, choosing the options, adding categories and clicking in 'start test'.
+          <br>
+          In both cases, an algorithm decides which words will appear in the test, and it depends on how much time did pass before
+          last time you studied that word, how difficult it is, what is your success ratio and a bit of random.
+          <br><br>
+          Lastly after doing the test we can see the results in Figure 7. Did I said I am good at remembering words?
+        </span>
+      </div>
+
+		</div>
+	</section>
+
+  <br>
+
+  <section id="testandresults">
+		<div class="container">
+      <header class="experiencetitle">
+				<h3>What's next</h3>
+			</header>
+			<br>
+
+      <div class="row">
+        <span class="col-lg-12">
+          First of all, the app need to be fixed because there are some strange bugs that happens from time to time. Also
+          the interface must be polished, and some features to make it more user friendly should be added.
+          <br><br>
+          After that, I am planning to completely change the way it's done. Right now I am using an Android database and everything
+          is stored in the mobile.
+          <br>
+          The idea is to separate the frontend from the backend by storing the data in a database in another computer, and access
+          it by web services. Therefore it will be easier to make versions for web, desktop or other mobile devices, and also
+          practicing a the same time new technologies.
+          <br><br> If you have any question or suggestion, please send an email to guille@silesbonilla.com
+
+        </span>
+      </div>
+
+		</div>
+	</section>
+</div>
