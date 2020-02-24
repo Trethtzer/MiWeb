@@ -28,5 +28,4 @@ export class AppComponent implements OnInit {
   onResize(){
     this.responsiveService.checkWidth();
   }
-
 }

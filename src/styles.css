@@ -38,14 +38,14 @@
     margin-right: 0px !important;
     padding-right: 0px !important;
     padding-left: 0px !important;
-    background-color: #444;
+    background-color: #333;
     border-left: 2px solid #333;
     border-right: 2px solid #333;
 }
 
 #miimagen{
     border-radius: 100px;
-    border: 2px solid #8DD;
+    border: 3px solid #466;
 }
 
 .centrado{
@@ -53,6 +53,7 @@
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  align-items: center;
 }
 
 .descripcion{
@@ -74,7 +75,7 @@
 
 .menuitemelement{
   color: #8DD;
-  background-color: #333;
+  background-color: #344;
   transition: all 500ms;
 }
 .menuitemelement:hover{

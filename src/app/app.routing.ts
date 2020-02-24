@@ -13,7 +13,7 @@ import {ProjectIndexComponent} from './components/projectIndex/projectIndex.comp
 
 
 const appRoutes: Routes = [
-    {path: '', component: HomeComponent},
+    {path: '', redirectTo: 'home', pathMatch: 'full'},
     {path: 'home', component: HomeComponent},
     {path: 'experience', component: ExperienceComponent},
     {path: 'projects', component: ProjectsComponent},

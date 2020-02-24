@@ -23,16 +23,12 @@ export class ResponsiveService {
 
     public checkWidth() {
         var width = window.innerWidth;
-        if (width <= 768) {
+        if (width <= 992) {
             this.screenWidth = 'sm';
             this.onMobileChange(true);
-        } else if (width > 768 && width <= 992) {
-            this.screenWidth = 'md';
-            this.onMobileChange(true);
-        } else {
+        }  else {
             this.screenWidth = 'lg';
             this.onMobileChange(false);
         }
     }
-
 }
