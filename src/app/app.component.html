@@ -1,12 +1,12 @@
 <div (window:resize)="onResize()" class="row mainpage h-100" *ngIf="!isMobile">
-  <div class="col-lg-9 maincontent">
+  <div class="col-md-9 maincontent">
       <cabecera></cabecera>
       <section id="main" class="wrapper">
         <ng-container *ngTemplateOutlet="routeroutlet">
         </ng-container>
       </section>
   </div>
-  <div id="menu" class="col-lg-3 mainmenu menuwrapper">
+  <div id="menu" class="col-md-3 mainmenu menuwrapper">
     <mainmenu></mainmenu>
   </div>
 </div>
