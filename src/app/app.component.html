@@ -1,4 +1,4 @@
-<div (window:resize)="onResize()" class="row mainpage h-100" *ngIf="!isMobile">
+<div (window:resize)="onResize()" class="row mainpage h-100" *ngIf="!isMobile && !isTablet">
   <div class="col-md-9 maincontent">
       <cabecera></cabecera>
       <section id="main" class="wrapper">
@@ -11,7 +11,19 @@
   </div>
 </div>
 
-<div (window:resize)="onResize()" class="row mainpage h-100" *ngIf="isMobile">
+<div (window:resize)="onResize()" class="row mainpage h-100" *ngIf="!isMobile && isTablet">
+  <div class="col-md-9 maincontent">
+      <section id="main" class="wrapper">
+        <ng-container *ngTemplateOutlet="routeroutlet">
+        </ng-container>
+      </section>
+  </div>
+  <div id="menu" class="col-md-3 mainmenu menuwrapper">
+    <mainmenu></mainmenu>
+  </div>
+</div>
+
+<div (window:resize)="onResize()" class="row mainpage h-100" *ngIf="!isTablet && isMobile">
   <div class="col-xs-12 maincontent">
     <div id="menu" class="mainmenu">
       <mainmenumovil></mainmenumovil>

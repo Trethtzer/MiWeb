@@ -9,6 +9,7 @@ import {ResponsiveService} from './utils/responsive.service';
 export class AppComponent implements OnInit {
   title = 'SilesBonilla';
   public isMobile: Boolean;
+  public isTablet: Boolean;
   constructor(private responsiveService:ResponsiveService){
   }
   ngOnInit(){
@@ -18,8 +19,18 @@ export class AppComponent implements OnInit {
         this.isMobile = true;
       }
       else{
-        console.log('Desktop detected');
+        console.log('Desktop detected?');
         this.isMobile = false;
+      }
+    });
+    this.responsiveService.getTabletStatus().subscribe( isTablet =>{
+      if(isTablet){
+        console.log('Tablet device detected');
+        this.isTablet = true;
+      }
+      else{
+        console.log('Desktop detected?');
+        this.isTablet = false;
       }
     });
     this.onResize();
