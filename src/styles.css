@@ -77,6 +77,12 @@
   color: #8DD;
   background-color: #344;
   transition: all 500ms;
+  margin-right: 0px !important;
+  margin-left: 0px !important;
+}
+.menuitemelementmobile{
+  margin-right: 0px !important;
+  margin-left: 0px !important;
 }
 .menuitemelement:hover{
   color: #8DD;
