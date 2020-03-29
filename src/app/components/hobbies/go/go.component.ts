@@ -6,4 +6,13 @@ import {Component} from '@angular/core';
 })
 export class GoComponent{
 
+  articlesVisibility : boolean[] =  [true // 1. Baduk problems
+                                    ];
+  
+  
+  
+  onChangeVisibility(position : number) {
+    this.articlesVisibility[position - 1] = !this.articlesVisibility[position - 1];  
+  }
 }
+
