@@ -7,15 +7,47 @@
   <br>
   <div style="font-size: 18px">
   Since I was a kid I started collecting warhammers with my young brother after visiting a 'games workshop' near our house.
-  I barely play though, just painted a lot of them until I grow older and didn't have time for it. Recently I started again with
-  other 3 friends to collect warhammer40k, so I will upload here photos of the miniatures we paint and the games we play.
+  I barely play though, just painted a lot of them until I grow older and didn't have time for it. Recently I started again to collect warhammer40k, 
+  so I will upload here photos of the miniatures we paint and the games we play.
+
+  <br><br>
+
+  <!-- 1. My first tyranids -->
+  <div (click)="onChangeVisibility(0)">
+    <h3 class="hobbysection">
+      <strong>1. My first tyranids</strong>
+    </h3>
+  </div>
+
+  <br>
+  
+  <div *ngIf="articlesVisibility[0]">
+    When I was a child I had a lot of warhammers, but all of them where fantasy (lizardmen, vampires, skavens...). I mainly played with my brother,
+    who also had a lot of them. But I always wanted to dive into the 40k world, although I didn't have friends to play with, so I never did.
+
+    <br><br>
+
+    After a lot of years (I think more than 10 years without painting) I somehow managed to convince my friends to give a try on 40k. They had never played
+    warhammers before and were shocked by the complexity of the rules and how interesting and funny is the game. I had a bad time deciding the race, because
+    I usually like a lot. In this case my main options were necrons, orks, eldars and what I finally chose: Tyranids.
+
+    <br><br>
+
+    <div class="row">
+      <div class="col-lg-8">
+        <img class="image fit" src="assets/images/warhammers/warhammer1_1.jpg" alt=""/>
+      </div>
+      <div class="col-lg-4">
+        I really like aliens, and I am enjoying painting them because I really found a color pattern I like (this turquoise in the armor along with the palid flesh).
+        I will upload more photos when I finish the squadrons, and comment what were the more difficult parts. For now on, the wings of the gargoyles are the most
+        difficult thing I faced.
+      </div>
+    </div>
+    
 
 
-  <!--
-  <div class="col-lg-4">
-    <span class="hobbytitle"> Warhammers </span><br>
-    <a rel="noopener" [routerLink]= "['/hobby/hobby6']" [routerLinkActive]="['menuitemelementselected']">
-      <img class="image fit" src="assets/images/hobby_warhammers.jpg" alt=""/>
-    </a>
-  </div>-->
+    
+
+  </div>
+  <!-- 1 ENDS -->
 </div>
