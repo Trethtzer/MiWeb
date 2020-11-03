@@ -5,5 +5,5 @@ import {Component} from '@angular/core';
   templateUrl: './mainmenu.component.html'
 })
 export class MainmenuComponent{
-  descripcion = 'Senior Software developer';
+  descripcion = 'Software developer specialized in web/app backend, computer vision and artificial intelligence';
 }
