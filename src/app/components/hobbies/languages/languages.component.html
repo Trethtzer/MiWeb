@@ -14,11 +14,55 @@
   I will point out here all the resources I found that were useful to me, along with some notes about curious things I found
   when learning this languages.
 
-  <!--
-  <div class="col-lg-4">
-    <span class="hobbytitle"> Warhammers </span><br>
-    <a rel="noopener" [routerLink]= "['/hobby/hobby6']" [routerLinkActive]="['menuitemelementselected']">
-      <img class="image fit" src="assets/images/hobby_warhammers.jpg" alt=""/>
-    </a>
-  </div>-->
+  <br><br>
+
+  <!-- 1. 101 korean -->
+  <div (click)="onChangeVisibility(1)">
+    <h3 class="hobbysection">
+      <strong>1. A dynamic way to learn Korean.</strong>
+    </h3>
+  </div>
+
+  <br>
+  
+  <div *ngIf="articlesVisibility[0]">
+    I really like to be efficient and to learn languages in a way that sticks into my memory. 
+    That is why I have been trying different methods and ways to learn korean during this five years.
+    <br><br>
+    Today I want to speak about a website and youtube channel that I found, which in fact has different programs 
+    for each language they offer, though I will speak only for the korean as it is the one I have been trying so far.
+
+    <br><br>
+
+    Here you can access through the links to the website and youtube channel:
+
+    <br><br>
+
+    <ul>
+      <li>
+        <a href="https://www.koreanclass101.com/" target="_blank"><strong>https://www.koreanclass101.com</strong></a>
+      </li>
+      Link to the website where you can navigate through the variety of content they have. There is also an mobile app
+      and they offer a variety of programs depending on how much money do you want to invest (from 0 to maybe around 50 a month).
+
+      <li>
+        <a href="https://www.youtube.com/channel/UCsgBUobNGksxIKTagZayKEw" target="_blank"><strong>Youtube channel</strong></a>
+      </li>
+      Here you have the youtube channel, where they post content weekly.
+    </ul>
+
+    <br><br>
+
+    I am going to speak a bit more about the Youtube channel. Here you can find some videos advertising the website and
+    all the content they offer, but there are also videos to learn certain grammars or practice some vocabulary.
+    <br>
+    There is also streams in youtube, which will be later posted as videos. In those streams you can interact with 
+    the teacher and get a better understanding of whatever you are studying at the moment.
+    <br>
+    Finally, there is a <a href="https://www.youtube.com/watch?v=dpOurYEbPa4" target="_blank">TV channel</a> in youtube, 
+    which is looping through several lessons. Once you know the basics, it could be useful to see it on background while
+    doing other things. You may discover new grammars / vocabulary that can be useful in your daily life.
+
+
+  </div>
 </div>
