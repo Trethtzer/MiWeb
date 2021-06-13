@@ -7,18 +7,72 @@
   <br>
   <div style="font-size: 18px">
   I will never forget when I saw the first videogame in my life. It was pokemon Blue, and another boy older than me was playing. He
-  had a Blastoise lvl 60 something and nothing more. It was nearly 20 years ago, when I was 8.
+  had a Blastoise lvl 60ish and thrash. It was nearly 20 years ago, when I was 8.
   <br><br>
   After this day I started to ask my parents about that game, that machine (Game Boy) and finally I got tetris (lul). Five years later
-  I got my first computer and now I am a computer engineer and enjoy playing, developing and discusing about videogames, and that is
-  what I will do in this section. I will write about the games I play and give my opinion.
+  I got my first computer and now I am a computer engineer and enjoy still playing, developing and discusing about videogames, and that is
+  what I will do in this section. 
+  <br><br>
+  I will write about the games I play and give my opinion.
+  </div>
 
+  <!-- 1. THEA The awakening -->
+  <div (click)="onChangeVisibility(1)">
+    <h3 class="hobbysection">
+      <strong>1. THEA The Awakening.</strong>
+    </h3>
+  </div>
 
-  <!--
-  <div class="col-lg-4">
-    <span class="hobbytitle"> Warhammers </span><br>
-    <a rel="noopener" [routerLink]= "['/hobby/hobby6']" [routerLinkActive]="['menuitemelementselected']">
-      <img class="image fit" src="assets/images/hobby_warhammers.jpg" alt=""/>
-    </a>
-  </div>-->
+  <br>
+  
+  <div *ngIf="articlesVisibility[0]">
+    
+    This is a kind of game that you cannot find on your own, unless you are really lucky. It is not very well known and in fact I am lucky to know it 
+    because a friend of mine did play in the past and recommended it to me. It is a survival strategy game, turn based, in which combat is
+    resolved by playing a card game, being your characters a card with different statistics. To complete the game you have to finish the main story, which
+    will make you face different types of encounters and problems.
+
+    <br><br>
+    
+    Why survival then? Well, if you make mistakes, your characters will suffer the consecuences. Like darkest dungeon, your characters can get ill, cursed, injured
+    and even die. And you never know what you will have to face, maybe you enter a dungeon to get some loot, and would find either normal skeletons or a group of 
+    specters and vampires (and in that case you  better be prepared or may end up starting a new game).
+
+    <br><br>
+
+    There is one nice thing though about starting a new game. Your colony worships a god, but there are different gods, and you can choose one at the begining of
+    the game. Different gods give different bonuses, and when you progress in the game with your god, you will unlock new powers for future games. By the way, the game
+    is not long, so it is not that rare to start a new game after finishing it. 
+
+    <br><br>
+
+    You may think that this is boring, (in fact I don´t like to replay a game, I just already did it!) but in this game there are different reasons to do so:
+
+    <ul>
+      <li>
+        First of all, it doesn´t have to be straight after, you may play other games and come back months or years later.
+      </li>
+      <li>
+        The difficulty the game is COMPLETELY customizable, and depending on how difficult you set the options (it is calculated with a percentage) your god will gain
+        more or less experience.
+      </li>
+      <li>
+        There are <strong>tons</strong> of events, it is imposible to see all of them in a game (in fact in my games I think I only saw 10%, there is a statistic for this).
+        So if you start a new game with a different god, the god questline will be different and also the events that you will face will not be the same.
+      </li>
+    </ul>
+
+    <br><br>
+
+    And also, for people who likes hardcore games, there are two options which combined makes the game almost impossible to beat, unless you are a strategic expert
+    and have your god at max level. This options are ironman (you cannot reload the game from an earlier point, if a character dies, it dies forever) and bloodbath,
+    which changes the way the injures work. It make it more realistic, basically the math behind the injuries change to have in consideration really big hits. For example,
+    let's suppose some orcs attack and reduce the life of one of your characters to 0, and the same does a super big giant, who hits the character with a giant stone.
+    In the normal mode, in both cases the character has 0 life and will have around 70% chance to die, unless you have a medic in your party (or someone with medic points),
+    which will reduce this death possibility. But in bloodbath mode probably the character will have -5 life and in the case of the giant, -70 life (it was smashed by
+    a giant stone dude). To not die from this hit, after the first turn you will have like 90% chance to die, but if you survive, then your life will be -65 or so, so again
+    you have 88% to die. In the end obviously the char dies, like in real life if a stone that big makes you human omelette.
+    
+    <br><br>
+  </div>
 </div>
